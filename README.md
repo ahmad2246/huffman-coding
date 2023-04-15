@@ -1,8 +1,10 @@
 # Huffman Image Compression
 
-This code performs lossless image compression using Huffman coding. It uses the "huffman" code from the website "https://www.javatpoint.com/huffman-coding-using-python" with modifications. The libraries used in this code include cv2, numpy, skimage.metrics, os, and time.
+This program uses Huffman coding for lossless image compression. It utilizes a modified version of the "huffman" code from the website "https://www.javatpoint.com/huffman-coding-using-python" and requires several libraries, including cv2, numpy, skimage.metrics, os, and time.
 
-The code first reads an image using cv2.imread, and then compresses the image using Huffman coding. The compressed binary file is then written to disk.
+To compress an image, the program first reads it using cv2.imread and then applies Huffman coding. The resulting compressed binary file is saved to disk.
+
+Afterwards, the compressed binary file is read and decoded using Huffman decoding, and the original image is reconstructed and saved. Finally, the program performs some image quality metrics.
 
 It's worth noting that the compressed binary file size may be larger than expected because each bit of the encoded message is stored as a separate character in a text file, which requires eight times as much storage as the bitstream. To fix this, the OutputEncoded() function in the huffman.py module can be modified to open the file in binary mode and write the bitstream directly to it using the write() method, converting the bitstream into bytes by dividing it into chunks of 8 bits and using the bytes() function.
 
