@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 15 17:43:56 2023
 
-@author: ahmad
-"""
 
 # Node of a Huffman Tree  
 class Nodes:  
